@@ -2,7 +2,7 @@ name: Build container(s) & Upload Artifacts
 
 on:
   push:
-    tags:
+    tags: 
       - '*'
 
 jobs:
