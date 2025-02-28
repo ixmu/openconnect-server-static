@@ -40,7 +40,7 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:latest,ghcr.io/${{ github.repository }}:${{ env.VERSION }}
       - name: Extract docker build artifacts
         run: |
-          ./extract-artifacts.sh ghcr.io/${{ github.repository }}
+          ./extract-artifacts.sh ghcr.io/${{ github.repository }} 
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
