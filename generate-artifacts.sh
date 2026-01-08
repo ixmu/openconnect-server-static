@@ -4,9 +4,14 @@ CONTAINER=$(docker create ocserv-static)
 
 mkdir -p ./dist/bin ./dist/sbin
 
-for FILE in "occtl" "ocpasswd" "ocserv-fw"
+for FILE in "occtl" "ocpasswd"
 do
 	docker cp "${CONTAINER}:/usr/local/bin/${FILE}" ./dist/bin
+done
+
+for FILE in "ocserv-fw"
+do
+	docker cp "${CONTAINER}:/usr/local/libexec/${FILE}" ./dist/bin
 done
 
 for FILE in "ocserv" "ocserv-worker"
