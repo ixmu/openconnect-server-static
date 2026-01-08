@@ -147,8 +147,20 @@ make -j`nproc`
 make install-exec
 file /usr/local/sbin/ocserv
 
-cp /usr/local/bin/oc* /scratchfs/usr/local/bin
-cp /usr/local/sbin/oc* /scratchfs/usr/local/sbin
+mkdir -p \
+	/scratchfs/etc/ssl/certs \
+	/scratchfs/etc/ssl/private \
+	/scratchfs/usr/local/bin \
+	/scratchfs/usr/local/libexec \
+	/scratchfs/usr/local/sbin \
+	/scratchfs/tmp \
+	/scratchfs/var/run
+
+cp /usr/local/bin/occtl /scratchfs/usr/local/bin
+cp /usr/local/bin/ocpasswd /scratchfs/usr/local/bin
+cp /usr/local/libexec/ocserv-fw /scratchfs/usr/local/libexec
+cp /usr/local/sbin/ocserv /scratchfs/usr/local/sbin
+cp /usr/local/sbin/ocserv-worker /scratchfs/usr/local/sbin
 cp /etc/ssl/certs/ca-certificates.crt /scratchfs/etc/ssl/certs
 echo "test" | /usr/local/bin/ocpasswd --passwd=/scratchfs/etc/ocserv/ocserv.passwd test
 
