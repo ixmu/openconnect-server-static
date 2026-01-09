@@ -159,6 +159,14 @@ mkdir -p \
 	/scratchfs/tmp \
 	/scratchfs/var/run
 
+# strip 文件
+strip /usr/local/bin/occtl \
+	/usr/local/bin/occtl \
+	/usr/local/bin/ocpasswd \
+	/usr/local/libexec/ocserv-fw \
+	/usr/local/sbin/ocserv \
+	/usr/local/sbin/ocserv-worker
+
 cp /usr/local/bin/occtl /scratchfs/usr/local/bin
 cp /usr/local/bin/ocpasswd /scratchfs/usr/local/bin
 cp /usr/local/libexec/ocserv-fw /scratchfs/usr/local/libexec
