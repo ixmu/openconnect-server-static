@@ -64,7 +64,7 @@ mkdir -p /usr/src/llhttp
 tar -xf /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz -C /usr/src/llhttp --strip-components=1
 rm -f /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz.tar.gz
 cd /usr/src/llhttp
-cmake .. -DBUILD_STATIC_LIBS=ON
+make
 make install
 
 #
