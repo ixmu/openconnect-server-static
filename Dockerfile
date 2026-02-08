@@ -156,6 +156,7 @@ LIBLZ4_CFLAGS="-I/usr/include" \
 LIBLZ4_LIBS="-L/usr/include -llz4" \
 CFLAGS="-Wno-type-limits" \
 LIBS="" \
+LIBS="-lz -lllhttp" \
 LDFLAGS="-L/usr/local/lib -s -w -static" \
 ./configure \
 	--with-local-talloc \
