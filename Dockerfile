@@ -44,9 +44,7 @@ apk add --no-cache \
 	xz \
 	lz4-dev lz4-static \
 	geoip-dev geoip-static \
-	zlib-dev zlib-static \
-    brotli-dev brotli-static \
-    zstd-dev zstd-static
+	zlib-dev zlib-static
 	
 mkdir -p /usr/src
 cd /usr/src
