@@ -41,7 +41,10 @@ apk add --no-cache \
 	readline-dev \
 	readline-static \
 	ronn \
-	xz
+	xz \
+	lz4-dev \
+	lz4-static
+	
 mkdir -p /usr/src
 cd /usr/src
 set -- \
