@@ -43,7 +43,9 @@ apk add --no-cache \
 	ronn \
 	xz \
 	lz4-dev \
-	lz4-static
+	lz4-static \
+	geoip-dev \
+	geoip-static
 	
 mkdir -p /usr/src
 cd /usr/src
