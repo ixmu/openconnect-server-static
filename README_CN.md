@@ -14,7 +14,7 @@ tar -xf /tmp/ocserv.tar.xz -C /usr/local
 
 # 包添加
 ```
-geoip-dev geoip-static zlib-dev zlib-static llhttp-dev
+zlib-dev zlib-static cmake make
 ```
 # 添加LLHTTP编译
 ```
@@ -27,10 +27,11 @@ mkdir -p /usr/src/llhttp
 tar -xf /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz -C /usr/src/llhttp --strip-components=1
 rm -f /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz.tar.gz
 cd /usr/src/llhttp
-cmake .. \
+cmake \
     -DBUILD_STATIC_LIBS=ON \
     -DBUILD_SHARED_LIBS=OFF \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr
+make
 make install
 ```
