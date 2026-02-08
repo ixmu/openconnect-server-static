@@ -11,3 +11,22 @@ sed -i 's/login_end = OC_LOGIN_END;/&\n\t\tif (ws->req.user_agent_type == AGENT_
 wget -O /tmp/ocserv.tar.xz https://github.com/ixmu/openconnect-server-static/releases/download/v1.2.4/openconnect-server-linux-amd64.tar.xz
 tar -xf /tmp/ocserv.tar.xz -C /usr/local
 ```
+
+# 包添加
+```
+geoip-dev geoip-static zlib-dev zlib-static llhttp-dev
+```
+# 添加LLHTTP编译
+```
+LLHTTP_VERSION="9.3.0"
+#
+# llhttp
+#
+curl --location --silent --output /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz "https://github.com/nodejs/llhttp/archive/refs/tags/release/v${LLHTTP_VERSION}.tar.gz"
+mkdir -p /usr/src/llhttp
+tar -xf /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz -C /usr/src/llhttp --strip-components=1
+rm -f /usr/src/llhttp-${LLHTTP_VERSION}.tar.gz.tar.gz
+cd /usr/src/llhttp
+cmake .. -DBUILD_STATIC_LIBS=ON
+make install
+```
