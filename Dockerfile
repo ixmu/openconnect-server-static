@@ -43,7 +43,8 @@ apk add --no-cache \
 	readline-static \
 	ronn \
 	xz \
-	geoip-dev geoip-static zlib-dev zlib-static llhttp-dev
+    zlib-dev zlib-static \
+	cmake make build-base
 	
 	
 mkdir -p /usr/src
