@@ -42,10 +42,11 @@ apk add --no-cache \
 	readline-static \
 	ronn \
 	xz \
-	lz4-dev \
-	lz4-static \
-	geoip-dev \
-	geoip-static
+	lz4-dev lz4-static \
+	geoip-dev geoip-static \
+	zlib-dev zlib-static \
+    brotli-dev brotli-static \
+    zstd-dev zstd-static
 	
 mkdir -p /usr/src
 cd /usr/src
