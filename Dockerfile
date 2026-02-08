@@ -42,8 +42,8 @@ apk add --no-cache \
 	readline-static \
 	ronn \
 	xz \
-	geoip-dev geoip-static \
-	zlib-dev zlib-static
+	geoip-dev geoip-static zlib-dev zlib-static llhttp-dev
+	
 	
 mkdir -p /usr/src
 cd /usr/src
