@@ -42,7 +42,6 @@ apk add --no-cache \
 	readline-static \
 	ronn \
 	xz \
-	lz4-dev lz4-static \
 	geoip-dev geoip-static \
 	zlib-dev zlib-static
 	
